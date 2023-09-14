@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Raif Laskar">
+        <title>Raif Laskar</title>
+        <link rel="stylesheet" href="no.css">
+        <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" >
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    </head>
+    <body> 
+        <py-script class="gray">
+            import time
+            import random
+            football = ["goal!", "penalty", "yellow card", "red card", "free kick"]
+            penalty = ["goal", "miss!"]
+            card = 0
+            turns = 100
+            goal = 0
+            while 1 != turns:
+                footballl = random.randint(0, 4)
+                abc = football[footballl]
+                print(abc)
+                turns = turns - 1
+                if abc == football[0]:
+                    goal += 1
+                elif abc == football[1]:
+                    gol = random.randint(0, 1)
+                    print(penalty[gol])
+                elif abc == football[2]:
+                    card += 1
+                elif abc == football[4]:
+                    print(penalty[random.randint(0, 1)])
+                elif abc == football[3]:
+                    turns = 0
+                    print("game over. your total goals are: " + str(goal))
+                elif card == 2:
+                    print("game over. your total goals are: " + str(goal))
+        </py-script>
+    </body>
+</html>
